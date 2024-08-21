@@ -1,0 +1,21 @@
+﻿@model DeptEmailSender.Models.Reminder
+
+<h1> Create Reminder</h1>
+<form asp-action="Create">
+	<div class=" form-group">
+		<label asp-for="RemTitle" class="control-label"></label>
+		<input asp-for="RemTitle" class="form-control" />
+		<span asp-validation-for="RemTitle" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="ReminderDateTime" class="control-label"></label>
+		<input asp-for="ReminderDateTime" class="form-control" />
+		<span asp-validation-for="ReminderDateTime" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Create" class="btn btn-primary" />
+	</div>
+</form>
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

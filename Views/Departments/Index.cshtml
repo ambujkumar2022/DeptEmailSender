@@ -1,0 +1,19 @@
+﻿@{
+	ViewData["Title"] = "Department";
+}
+
+
+@model IEnumerable<DeptEmailSender.Models.Department>
+
+
+<h1> Departments</h1>
+<ul>
+	@foreach (var department in Model)
+	{
+		<li>
+			<a asp-action="Index" asp-route-id="@department.DeptId"> @department.DeptName</a>
+		</li>
+	}
+</ul>
+
+<a asp-action="Create">Create New Department</a>
